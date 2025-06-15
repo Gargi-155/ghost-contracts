@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghost Contracts</title>
+  <link rel="stylesheet" href=styles.css />
+</head>
+<body>
+  <div class="main-wrapper">
+    <header>
+      <h1>👻 Ghost Contracts</h1>
+      <p class="tagline">Clarity in contracts — job offers, loans, leases, and more.</p>
+    </header>
+
+    <section class="intro-section">
+      <p class="description">
+        This website uses AI to detect and explain shady, one-sided clauses hidden in everyday documents.<br />
+        It works like an <strong>“antivirus for fine print”</strong>, helping you understand what you're really agreeing to — in simple, clear language.
+      </p>
+      <div class="how-to-use">
+        <h2>🚀 How to Use</h2>
+        <ul>
+          <li>📄 <strong>Upload</strong> your contract file or paste its content into the text box.</li>
+          <li>🔍 <strong>Click</strong> on "Analyze Contract" to let the AI scan the document.</li>
+          <li>📑 <strong>Review</strong> simplified summaries of the contract and risky clauses.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="upload-section">
+      <label for="fileInput" class="upload-box">
+        <span>📄 Click or Drag to Upload Contract</span>
+        <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg,.txt" />
+        <p id="fileName" class="file-name-display"></p>
+        <button id="removeFileBtn" style="display: none;" type="button">❌ Remove File</button>
+        <div id="filePreview" class="file-preview"></div>
+      </label>
+
+      <div class="paste-box">
+        <textarea id="textInput" placeholder="Paste contract text here..." rows="8"></textarea>
+      </div>
+    </section>
+
+    <div class="action-button">
+      <button onclick="analyzeInput()">🔍 Analyze Contract</button>
+    </div>
+
+    <section id="results" class="results-section" style="display:none;">
+      <h2>🧾 Analysis Results</h2>
+      <div class="results-container"></div>
+      <div class="raw-text-box">
+        <h3>📄 Extracted Text</h3>
+        <pre id="rawText" class="raw-text-content"></pre>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ghost Contracts. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
